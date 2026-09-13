@@ -4,7 +4,7 @@ import Logo from '../assets/logo-text.png'
 const Navbar = () => {
     return (
         <div className='sticky top-0 z-50 bg-white'>
-            <nav className=" max-w-7xl mx-auto flex justify-between items-center py-5 mt-3 p-4 ">
+            <nav className=" max-w-7xl mx-auto flex justify-between items-center py-5 mt-3 px-3 md:px-0">
                 <span className='md:hidden flex '><IoMenu className='h-10 w-10' /> </span>
                 <img className='md:flex hidden' src={Logo} alt="Logo" />
 

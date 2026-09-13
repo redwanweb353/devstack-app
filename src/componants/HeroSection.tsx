@@ -8,7 +8,7 @@ const HeroSection = () => {
                         <h2 className='md:text-[60px] text-[40px] font-extrabold '>Build Your Ideal <br /> <span className='bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'> Development Stack</span></h2>
                         <p className='my-5 text-[#475569] md:text-lg '>Explore frontend, backend, database, and tooling options,<br /> compare them side by side, and put together the stack that fits your <br />next project.</p>
                     </div>
-                    <div className='flex gap-5 mt-10'>
+                    <div className='flex justify-center md:justify-start gap-5 mt-10'>
                         <button className='btn  bg-linear-to-r py-5 from-[#F97316] to-[#EC4899] text-white rounded-lg'>Explore Technologies</button>
                         <button className='btn w-43 font-light rounded-lg'>Learn More</button>
                     </div>
