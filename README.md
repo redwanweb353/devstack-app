@@ -1,4 +1,5 @@
-Project Name : # Dev Stack 
+#Project Name :  Dev Stack 
+
 Description : DevStack is a responsive technology stack management web application that allows developers to explore different technologies and build their own personalized tech stack. Users can add technologies, prevent duplicates, and manage their selected stack by removing individual or all items.
 
 Technologies Used :
