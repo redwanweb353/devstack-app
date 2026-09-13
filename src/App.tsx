@@ -21,12 +21,20 @@ function App() {
   return (
     <>
       <div>
-        <Suspense fallback={<div className='flex min-h-screen items-center justify-center'><span className="loading loading-lg scale-200 loading-spinner text-secondary"></span></div>}>
-          <Navbar />
-          <HeroSection></HeroSection>
+
+
+        <Navbar />
+
+        <HeroSection></HeroSection>
+
+        <Suspense fallback={<div className='flex min-h-screen items-center justify-center'> <span className="loading loading-lg scale-100 loading-spinner text-secondary"></span></div>}>
           <Technologies technologyPromise={technologyPromise}></Technologies>
-          <Footer></Footer>
         </Suspense>
+
+
+        <Footer></Footer>
+
+
 
       </div>
     </>
