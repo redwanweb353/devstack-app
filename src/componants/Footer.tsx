@@ -4,9 +4,9 @@ const Footer = () => {
         <div className=' md:mt-25 py-6 md:pt-15 border-t border-gray-200'>
             <div className='max-w-7xl mx-auto p-4 md:p-0 text-[12px] '>
                 <div className='max-w-7xl mx-auto grid md:grid-cols-5 gap-5 py-4 md:py-0 text-[12px] pb-2 md:pb-8 border-b border-gray-200'>
-                    <div className='md:col-span-2 md:w-full flex flex-col justify-center items-center'>
+                    <div className='md:col-span-2 md:w-full flex flex-col justify-center md:justify-start md:items-start items-center'>
                         <img src={Logo} alt="Devstack" />
-                        <p className='text-center my-4 text-[#64748B]'>Curated tools, technologies, and resources for developers building <br /> modern software.</p>
+                        <p className='text-center md:text-left my-4 text-[#64748B]'>Curated tools, technologies, and resources for developers building <br /> modern software.</p>
                         <div className='flex my-6 gap-6 font-bold text-[#475569]'>
                             <span>GitHub</span>
                             <span> Twitter
