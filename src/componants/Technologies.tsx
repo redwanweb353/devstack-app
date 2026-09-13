@@ -54,7 +54,7 @@ const Technologies = ({ technologyPromise }: TechnologyPropas) => {
             <div className='grid md:grid-cols-4 gap-5 max-w-7xl mx-auto my-5' >
 
                 <div className='md:col-span-3'>
-                    <div className='grid md:grid-cols-3 gap-5'>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
                             technologiesData.map((technology) => <TechnologyCard key={technology.id} technology={technology} handleAddToStack={handleAddToStack} />)
                         }
