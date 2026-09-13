@@ -13,7 +13,7 @@ const Footer = () => {
                             </span><span>LinkedIn</span>
                         </div>
                     </div>
-                    <div className=' hidden col-span-3 md:flex justify-between list-none text-[#64748B]'>
+                    <div className='hidden col-span-3 md:flex justify-between list-none text-[#64748B]'>
                         <div className='flex flex-col gap-2'>
                             <h2 className='font-bold text-[#0F172A] mb-2' >PRODUCT</h2>
                             <li>Home</li>
