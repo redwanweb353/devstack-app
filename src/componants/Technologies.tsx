@@ -44,6 +44,22 @@ const Technologies = ({ technologyPromise }: TechnologyPropas) => {
             progress: undefined,
             theme: "colored",
         });
+
+
+    }
+    const handleWarning = (technology: TechnologyType) => {
+        if (stackData.find((s) => s.id === technology.id)) {
+            toast.error(`${technology.name} is already added to stack!`, {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        }
     }
 
 
@@ -56,7 +72,7 @@ const Technologies = ({ technologyPromise }: TechnologyPropas) => {
                 <div className='md:col-span-3'>
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
-                            technologiesData.map((technology) => <TechnologyCard key={technology.id} technology={technology} handleAddToStack={handleAddToStack} />)
+                            technologiesData.map((technology) => <TechnologyCard key={technology.id} technology={technology} handleAddToStack={handleAddToStack} handleWarning={handleWarning} />)
                         }
                     </div>
 

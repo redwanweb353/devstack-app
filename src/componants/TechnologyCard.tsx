@@ -3,16 +3,18 @@ import { FaStar } from 'react-icons/fa';
 import type { TechnologyType } from '../type/type'
 import { getTechnologyStyle } from './BadgeColor';
 import { useState } from 'react';
+import { GiCheckMark } from 'react-icons/gi';
 
 
 interface TechnologyCardProps {
     technology: TechnologyType,
     handleAddToStack: (technology: TechnologyType) => void,
+    handleWarning: (technology: TechnologyType) => void,
 
 
 }
 
-const TechnologyCard = ({ technology, handleAddToStack }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology, handleAddToStack, handleWarning }: TechnologyCardProps) => {
 
     const [isDisabled, setIsDisabled] = useState<boolean>(false);
 
@@ -22,6 +24,10 @@ const TechnologyCard = ({ technology, handleAddToStack }: TechnologyCardProps) =
         handleAddToStack(technology);
         setIsDisabled(true);
 
+    }
+
+    const handleWarn = () => {
+        handleWarning(technology)
     }
 
 
@@ -47,8 +53,8 @@ const TechnologyCard = ({ technology, handleAddToStack }: TechnologyCardProps) =
                 <span className='text-[#334155] flex gap-2  text-[12px]'> <FaStar className='text-[#FBBF24] mt-0.5 ' />{technology.rating}</span>
             </div>
 
-            <div className=' mt-auto'>
-                <button disabled={isDisabled} className={`btn w-full bg-[#0A0F1D]  rounded-lg ${isDisabled ? 'bg-[#ffeaf4e0] text-[#DB2777]  ' : 'text-white '}`} onClick={handleAddToStackClick}> Add to Stack</button>
+            <div onClick={handleWarn} className=' mt-auto  cursor-not-allowed'>
+                <button disabled={isDisabled} className={`btn w-full bg-[#0A0F1D]  rounded-lg ${isDisabled ? 'bg-[#ffeaf4e0] text-[#DB2777]  ' : 'text-white '}`} onClick={handleAddToStackClick}>{isDisabled ? <GiCheckMark /> : ""}{isDisabled ? 'Added to Stack' : 'Add to Stack'} </button>
 
             </div>
         </div>
